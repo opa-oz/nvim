@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/Users/vladimir.levin/.local/share/nvim/lazy/neodev.nvim/types/nightly",
+        "/opt/homebrew/Cellar/neovim/0.10.0/share/nvim/runtime/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/indent-blankline.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/mason.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/LuaSnip/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/lsp-zero.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/which-key.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/Comment.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/nvim-tree.lua/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/dracula.nvim/lua",
+        "/Users/vladimir.levin/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/Users/vladimir.levin/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
