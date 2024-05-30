@@ -22,6 +22,7 @@ local plugins = {
     require("opa-oz.plugins.lualine"),
     require("opa-oz.plugins.nvim-oil"),
     require("opa-oz.plugins.nvim-toggleterm"),
+    require("opa-oz.plugins.undotree"),
 }
 
 return plugins
