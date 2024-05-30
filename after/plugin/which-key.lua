@@ -4,11 +4,6 @@ wk.register({
     ["<leader>"] = {
         y = { "\"+y", "Cop[y] to system clipboard", noremap = true, mode = "n" },
         Y = { "\"+Y", "Cop[Y] to system clipboard", noremap = true, mode = "n" },
-        --[[ p = {
-            name = "Project",
-            v = { vim.cmd.Ex, "Open file folder" },
-        }, ]]
-        -- f = { function() vim.lsp.buf.format() end, "Format file" },
     },
     ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
     ['<leader>p'] = { name = '[P]roject', _ = 'which_key_ignore' },
@@ -20,6 +15,7 @@ wk.register({
     ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
     ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
     ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
+    ['<leader>u'] = { name = '[U]ndo tree', _ = 'which_key_ignore' },
     ["<C-t>"] = { ":NvimTreeToggle<cr>", "Open tree", silent = true, noremap = true },
     ["<C-s>"] = { ":w<cr>", "[S]ave File" },
     J = { ":m '>+1<CR>gv=gv", "Move Down", mode = "v" },
