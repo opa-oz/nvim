@@ -30,6 +30,7 @@ return {
             yaml = { 'yamllint' },
             -- Conform can also run multiple formatters sequentially
             python = { "isort", "black" },
+            javascript = { "prettierd", "eslint" }
             --
             -- You can use a sub-list to tell conform to run *until* a formatter
             -- is found.

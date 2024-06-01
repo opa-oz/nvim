@@ -96,10 +96,26 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls' },
+    ensure_installed = { 'lua_ls', 'tsserver', 'eslint' },
     handlers = {
         function(server_name)
             require('lspconfig')[server_name].setup({})
         end,
+        pylsp = function()
+            require('lspconfig').pylsp.setup({
+                settings = {
+                    pylsp = {
+                        plugins = {
+                            black = { enabled = true },
+                            pylint = { enabled = true, executable = "pylint" },
+                            pyls_isort = { enabled = true },
+                        },
+                        flags = {
+                            debounce_text_changes = 200,
+                        },
+                    }
+                }
+            })
+        end
     },
 })
