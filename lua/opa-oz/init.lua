@@ -18,3 +18,34 @@ require("opa-oz.hooks")
 
 -- init autocommands
 require("opa-oz.autocommands")
+
+-- vim.api.nvim_create_autocmd('BufReadPost', {
+--     pattern = "*",
+--     callback = function(event)
+--         -- Test self-written plugins
+--         vim.lsp.start({
+--             bufnr = event.bufnr,
+--             name = "emoji-lsp",
+--             -- filetypes = { 'lua', 'json' },
+--             cmd = { "/Users/vladimirlevin/Repos/Goland/emoji-lsp/bin/emoji-lsp" },
+--             root_dir = vim.fn.getcwd(),
+--             -- root_dir = '/Users/vladimirlevin/.config/nvim',
+--         })
+--     end,
+-- })
+
+
+-- vim.api.nvim_create_autocmd('BufReadPost', {
+--     pattern = "*.pug",
+--     callback = function(event)
+--         -- Test self-written plugins
+--         vim.lsp.start({
+--             bufnr = event.bufnr,
+--             name = "pug-lsp",
+--             -- filetypes = { 'lua', 'json' },
+--             cmd = { "/Users/vladimirlevin/Repos/Goland/pug-lsp/pug-lsp" },
+--             root_dir = vim.fn.getcwd(),
+--             -- root_dir = '/Users/vladimirlevin/.config/nvim',
+--         })
+--     end,
+-- })

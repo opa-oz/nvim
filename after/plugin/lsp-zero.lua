@@ -4,15 +4,20 @@ lsp_zero.on_attach(function(event, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
     lsp_zero.default_keymaps({ buffer = bufnr })
-    local opts = { buffer = bufnr, remap = true }
+    -- local opts = { buffer = bufnr, remap = true }
 
     local builtin = require("telescope.builtin")
     local map = function(keys, func, desc)
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = 'LSP: ' .. desc })
     end
 
+
     map('<leader>vrn', function() vim.lsp.buf.rename() end, 'Re[N]ame')
     map('<leader>vrr', function() vim.lsp.buf.reference() end, '[R]eference')
+
+    -- map('<C-h>', function() vim.lsp.buf.signature_help() end, 'Signature [H]elp')
+    vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end,
+        { buffer = bufnr, desc = 'LSP: Signature [H]elp', remap = true })
 
     -- Jump to the definition of the word under your cursor.
     --  This is where a variable was first declared, or where a function is defined, etc.
@@ -55,6 +60,8 @@ lsp_zero.on_attach(function(event, bufnr)
     --  For example, in C this would take you to the header.
     map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
+    map('<leader>ge', function() vim.diagnostic.open_float() end, '[G]et [E]rror')
+
     -- The following two autocommands are used to highlight references of the
     -- word under your cursor when your cursor rests there for a little while.
     --    See `:help CursorHold` for information about when this is executed
@@ -94,7 +101,11 @@ lsp_zero.on_attach(function(event, bufnr)
     end
 end)
 
-require('mason').setup({})
+require('mason').setup({
+    -- registries = {
+    --     "file:~/Repos/mason-registry"
+    -- }
+})
 require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls', 'tsserver', 'eslint' },
     handlers = {
@@ -116,6 +127,7 @@ require('mason-lspconfig').setup({
                     }
                 }
             })
-        end
+        end,
     },
 })
+
