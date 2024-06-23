@@ -6,7 +6,9 @@ wk.register({
 		pf = { builtin.find_files, "Find files", mode = "n" },
 		ps = {
 			function()
-				builtin.grep_string({ search = vim.fn.input("Grep > ") })
+				-- BurntSushi/ripgrep is required for live_grep and grep_string and is the first priority for find_files.
+				builtin.live_grep()
+				-- builtin.grep_string({ search = vim.fn.input("Grep > ") })
 			end,
 			"Find in files",
 			mode = "n",
