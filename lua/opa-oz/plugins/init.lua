@@ -1,5 +1,6 @@
 local plugins = {
 	require("opa-oz.plugins.dracula-theme"),
+	--require("opa-oz.plugins.dashboard"),
 
 	require("opa-oz.plugins.nvim-telescope"),
 	require("opa-oz.plugins.nvim-comment"),
@@ -26,6 +27,7 @@ local plugins = {
 
 	{ "github/copilot.vim", tag = "v1.37.0" },
 	require("opa-oz.plugins.startup-time"),
+	require("opa-oz.plugins.todo-comments"),
 }
 
 return plugins
