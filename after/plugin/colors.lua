@@ -1,4 +1,3 @@
-
 function apply_colors(color)
 	color = color or "dracula"
 

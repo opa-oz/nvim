@@ -10,20 +10,20 @@ vim.opt.termguicolors = true
 
 -- OR setup with some options
 require("nvim-tree").setup({
-    sort = {
-        sorter = "case_sensitive",
-    },
-    view = {
-        width = 50,
-    },
-    filters = { custom = { "^.git$" } },
-    git = { enable = true },
-    renderer = {
-        highlight_git = true,
-        icons = {
-            show = {
-                git = true,
-            },
-        },
-    },
+	sort = {
+		sorter = "case_sensitive",
+	},
+	view = {
+		width = 50,
+	},
+	filters = { custom = { "^.git$" } },
+	git = { enable = true },
+	renderer = {
+		highlight_git = true,
+		icons = {
+			show = {
+				git = true,
+			},
+		},
+	},
 })

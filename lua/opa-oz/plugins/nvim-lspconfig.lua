@@ -1,1 +1,4 @@
-return { 'neovim/nvim-lspconfig', dependencies = { { 'folke/neodev.nvim', opts = {} } } }
+return {
+	"neovim/nvim-lspconfig",
+	dependencies = { { "folke/neodev.nvim", opts = {} } },
+}
