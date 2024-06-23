@@ -7,7 +7,7 @@ require("opa-oz.terminal")
 local plugins = require("opa-oz.plugins")
 
 require("lazy").setup(plugins)
-require("ibl").setup()
+-- require("ibl").setup() -- init of indent-blankline
 require("Comment").setup()
 require("lualine").setup({
 	options = { theme = "dracula" },

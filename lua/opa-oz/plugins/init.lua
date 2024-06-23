@@ -1,6 +1,6 @@
 local plugins = {
 	require("opa-oz.plugins.dracula-theme"),
-	--require("opa-oz.plugins.dashboard"),
+	require("opa-oz.plugins.dashboard"),
 
 	require("opa-oz.plugins.nvim-telescope"),
 	require("opa-oz.plugins.nvim-comment"),
@@ -16,7 +16,6 @@ local plugins = {
 
 	require("opa-oz.plugins.which-key"),
 	require("opa-oz.plugins.nvim-tree"),
-	require("opa-oz.plugins.indent-blankline"),
 	require("opa-oz.plugins.nvim-conform"),
 	require("opa-oz.plugins.mini"),
 	require("opa-oz.plugins.lualine"),
@@ -28,6 +27,10 @@ local plugins = {
 	{ "github/copilot.vim", tag = "v1.37.0" },
 	require("opa-oz.plugins.startup-time"),
 	require("opa-oz.plugins.todo-comments"),
+	require("opa-oz.plugins.hlsearch"),
+
+	-- require("opa-oz.plugins.indent-blankline"),
+	require("opa-oz.plugins.indent-mini"),
 }
 
 return plugins

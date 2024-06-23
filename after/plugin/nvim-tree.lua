@@ -4,26 +4,3 @@ vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
-
--- empty setup using defaults
--- require("nvim-tree").setup()
-
--- OR setup with some options
-require("nvim-tree").setup({
-	sort = {
-		sorter = "case_sensitive",
-	},
-	view = {
-		width = 50,
-	},
-	filters = { custom = { "^.git$" } },
-	git = { enable = true },
-	renderer = {
-		highlight_git = true,
-		icons = {
-			show = {
-				git = true,
-			},
-		},
-	},
-})
