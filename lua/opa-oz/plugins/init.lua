@@ -30,8 +30,8 @@ local plugins = {
     require("opa-oz.plugins.todo-comments"),
     require("opa-oz.plugins.hlsearch"),
 
-    -- require("opa-oz.plugins.indent-blankline"),
     require("opa-oz.plugins.indent-mini"),
+    require("opa-oz.plugins.gitsigns"),
 }
 
 return plugins
