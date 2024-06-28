@@ -3,18 +3,10 @@ local wk = require("which-key")
 
 wk.register({
     ["<leader>"] = {
-        pf = { builtin.find_files, "Find files", mode = "n" },
-        ps = {
-            function()
-                -- BurntSushi/ripgrep is required for live_grep and grep_string and is the first priority for find_files.
-                builtin.live_grep()
-                -- builtin.grep_string({ search = vim.fn.input("Grep > ") })
-            end,
-            "Find in files",
-            mode = "n",
-        },
-        sk = { builtin.keymaps, "Search Keymaps" },
-        sw = { builtin.grep_string, "Search current Word" },
+        pf = { builtin.find_files, "[F]ind files", mode = "n" },
+        ps = { builtin.live_grep, "Live [S]earch", mode = "n" },
+        sk = { builtin.keymaps, "[S] earch [K]eymaps" },
+        sw = { builtin.grep_string, "[S]earch current [W]ord" },
         -- Slightly advanced example of overriding default behavior and theme
         ["/"] = {
             function()
@@ -30,7 +22,7 @@ wk.register({
             function()
                 builtin.find_files({ cwd = vim.fn.stdpath("config") })
             end,
-            "Search Neovim files",
+            "[S]earch [N]eovim files",
         },
     },
     ["<C-p>"] = { builtin.git_files, "Find in Git" },

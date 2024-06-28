@@ -1,7 +1,7 @@
 require("opa-oz.install-lazy")
-require("opa-oz.set")
-require("opa-oz.remap")
-require("opa-oz.terminal")
+require("opa-oz.config.set")
+require("opa-oz.config.remap")
+require("opa-oz.config.terminal")
 
 -- init plugins
 local plugins = require("opa-oz.plugins")
@@ -35,3 +35,13 @@ require("opa-oz.autocommands")
 -- 		})
 -- 	end,
 -- })
+
+-- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+-- parser_config.tfvars = {
+--     install_info = {
+--         url = "https://github.com/opa-oz/tree-sitter-tfvars", -- local path or git repo
+--         files = { "src/parser.c", "src/scanner.c" }, -- note that some parsers also require src/scanner.c or src/scanner.cc
+--     },
+--     filetype = "terraform-vars", -- if filetype does not match the parser name
+-- }
+-- vim.treesitter.language.register("tfvars", { "terraform-vars" })

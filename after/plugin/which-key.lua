@@ -21,4 +21,10 @@ wk.register({
     J = { ":m '>+1<CR>gv=gv", "Move Down", mode = "v" },
     K = { ":m '>-2<CR>gv=gv", "Move Up", mode = "v" },
     -- K = { "ddkP", "Move Up", mode = "v" },
+    ["sa"] = { name = "[S]urround [A]dd", _ = "which_key_ignore" },
+    ["sd"] = { name = "[S]urround [D]elete", _ = "which_key_ignore" },
+    ["sf"] = { name = "[S]urround [F]ind right", _ = "which_key_ignore" },
+    ["sF"] = { name = "[S]urround [F]ind left", _ = "which_key_ignore" },
+    ["sh"] = { name = "[S]urround [H]ighlight", _ = "which_key_ignore" },
+    ["sr"] = { name = "[S]urround [R]eplace", _ = "which_key_ignore" },
 })

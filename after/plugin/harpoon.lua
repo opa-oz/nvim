@@ -6,10 +6,10 @@ harpoon:setup()
 
 vim.keymap.set("n", "<leader>a", function()
     harpoon:list():add()
-end)
+end, { desc = "[A]dd to Harpoon" })
 vim.keymap.set("n", "<C-e>", function()
     harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
+end, { desc = "Op[E]n Harpoon" })
 
 -- vim.keymap.set("n", "<C-1>", function() harpoon:list():select(1) end)
 -- vim.keymap.set("n", "<C-2>", function() harpoon:list():select(2) end)
