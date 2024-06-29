@@ -19,6 +19,14 @@ require("opa-oz.hooks")
 -- init autocommands
 require("opa-oz.autocommands")
 
+require("workspaces").setup({
+    hooks = {
+        open = "NvimTreeOpen",
+    },
+})
+
+require("opa-oz.config.sync-workspaces")
+
 -- require("lspconfig").pug.setup({})
 
 -- vim.api.nvim_create_autocmd("BufReadPost", {
@@ -37,11 +45,12 @@ require("opa-oz.autocommands")
 -- })
 
 -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
--- parser_config.tfvars = {
+-- parser_config.robots = {
 --     install_info = {
---         url = "https://github.com/opa-oz/tree-sitter-tfvars", -- local path or git repo
+--         url = "https://github.com/opa-oz/tree-sitter-robots-txt", -- local path or git repo
 --         files = { "src/parser.c", "src/scanner.c" }, -- note that some parsers also require src/scanner.c or src/scanner.cc
+--         branch = "main",
 --     },
---     filetype = "terraform-vars", -- if filetype does not match the parser name
+--     -- filetype = "terraform-vars", -- if filetype does not match the parser name
 -- }
 -- vim.treesitter.language.register("tfvars", { "terraform-vars" })

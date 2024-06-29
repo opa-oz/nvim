@@ -24,12 +24,15 @@ local plugins = {
     require("opa-oz.plugins.hlsearch"),
     require("opa-oz.plugins.mini"),
 
-    -- UI
+    -- Navigation
     require("opa-oz.plugins.nvim-telescope"),
     require("opa-oz.plugins.nvim-tree"),
-    require("opa-oz.plugins.dracula-theme"),
-    require("opa-oz.plugins.dashboard"),
     require("opa-oz.plugins.harpoon"),
+    require("opa-oz.plugins.workspaces"),
+    require("opa-oz.plugins.dashboard"),
+
+    -- UI
+    require("opa-oz.plugins.dracula-theme"),
     require("opa-oz.plugins.lualine"),
     require("opa-oz.plugins.undotree"),
 
