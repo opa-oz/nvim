@@ -23,6 +23,7 @@ local plugins = {
     require("opa-oz.plugins.nvim-toggleterm"),
     require("opa-oz.plugins.hlsearch"),
     require("opa-oz.plugins.mini"),
+    require("opa-oz.plugins.nvim-macros"),
 
     -- Navigation
     require("opa-oz.plugins.nvim-telescope"),

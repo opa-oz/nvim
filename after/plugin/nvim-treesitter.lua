@@ -32,6 +32,7 @@ local ensure_installed = {
     "terraform",
     "typescript",
     "toml",
+    "robots",
     "yaml",
     "xml",
 }
