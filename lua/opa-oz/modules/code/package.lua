@@ -1,7 +1,9 @@
-return {
+local conf = require("opa-oz.modules.code.config")
+
+packageadd({
     -- Autoformat
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
+    event = "BufWritePre",
     cmd = { "ConformInfo" },
     tag = "v5.9.0",
     keys = {
@@ -24,4 +26,23 @@ return {
             javascript = { "prettierd", "eslint" },
         },
     },
-}
+})
+
+packageadd({
+    "folke/which-key.nvim",
+    lazy = true,
+    event = "VimEnter",
+    tag = "v2.1.0",
+    config = conf.whichkey,
+})
+
+packageadd({ "github/copilot.vim", tag = "v1.37.0" })
+
+packageadd({
+    "dstein64/vim-startuptime",
+    -- lazy-load on a command
+    cmd = "StartupTime",
+    tag = "v4.5.0",
+    -- init is called during startup. Configuration for vim plugins typically should be set in an init function
+    init = conf.startuptime,
+})

@@ -1,33 +1,13 @@
-require("opa-oz.install-lazy")
+require("opa-oz.packages"):boot_strap()
 require("opa-oz.config.set")
 require("opa-oz.config.remap")
 require("opa-oz.config.terminal")
-
--- init plugins
-local plugins = require("opa-oz.plugins")
-
-require("lazy").setup(plugins)
-require("Comment").setup()
-require("gitsigns").setup()
-require("lualine").setup({
-    options = { theme = "dracula" },
-})
 
 -- init hooks
 require("opa-oz.hooks")
 
 -- init autocommands
 require("opa-oz.autocommands")
-
-require("workspaces").setup({
-    hooks = {
-        open = "NvimTreeOpen",
-    },
-})
-
-require("opa-oz.config.sync-workspaces")
-
--- require("lspconfig").pug.setup({})
 
 -- vim.api.nvim_create_autocmd("BufReadPost", {
 -- 	pattern = "*.pug",

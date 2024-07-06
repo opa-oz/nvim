@@ -1,9 +1,10 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+local key, g = vim.keymap, vim.g
 
-local key = vim.keymap
+g.mapleader = " "
+g.maplocalleader = "\\"
+
 local map = function(keys, func, desc)
-    vim.keymap.set("n", keys, func, { desc = desc })
+    key.set("n", keys, func, { desc = desc })
 end
 
 key.set("n", "<leader>y", '"+y')
@@ -21,6 +22,4 @@ map("<C-h>", "<C-w><C-h>", "Move focus to the left window")
 map("<C-l>", "<C-w><C-l>", "Move focus to the right window")
 map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
 map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
-
 map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
-map("-", "<CMD>Oil<CR>", "Open parent directory")

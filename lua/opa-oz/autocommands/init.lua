@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
-    callback = function(args)
+    callback = function(_)
         -- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-imports
         local params = vim.lsp.util.make_range_params()
         params.context = { only = { "source.organizeImports" } }
@@ -32,15 +32,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.lsp.buf.format({ async = false })
     end,
 })
-
--- vim.api.nvim_create_autocmd({ "BufReadPost" }, {
---     -- https://github.com/nikeee/dot-language-server?tab=readme-ov-file#neovim
---     pattern = { "*.md" },
---     callback = function()
---         vim.lsp.start({
---             name = "emoji-lsp",
---             cmd = { "emoji-lsp" },
---             root_dir = vim.fn.getcwd(),
---         })
---     end,
--- })
