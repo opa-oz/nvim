@@ -4,11 +4,25 @@ function config.nvimtelescope()
     local builtin = require("telescope.builtin")
     local wk = require("which-key")
 
+    local search_dirs = { ".", ".github" }
+
     wk.register({
         ["<leader>"] = {
-            pf = { builtin.find_files, "[F]ind files", mode = "n" },
-            ps = { builtin.live_grep, "Live [S]earch", mode = "n" },
-            sk = { builtin.keymaps, "[S] earch [K]eymaps" },
+            pf = {
+                function()
+                    builtin.find_files({ search_dirs = search_dirs })
+                end,
+                "[F]ind files",
+                mode = "n",
+            },
+            ps = {
+                function()
+                    builtin.live_grep({ search_dirs = search_dirs })
+                end,
+                "Live [S]earch",
+                mode = "n",
+            },
+            sk = { builtin.keymaps, "[S]earch [K]eymaps" },
             sw = { builtin.grep_string, "[S]earch current [W]ord" },
             -- Slightly advanced example of overriding default behavior and theme
             ["/"] = {
@@ -23,7 +37,7 @@ function config.nvimtelescope()
             },
             sn = {
                 function()
-                    builtin.find_files({ cwd = vim.fn.stdpath("config") })
+                    builtin.find_files({ cwd = vim.fn.stdpath("config"), search_dirs = search_dirs })
                 end,
                 "[S]earch [N]eovim files",
             },
