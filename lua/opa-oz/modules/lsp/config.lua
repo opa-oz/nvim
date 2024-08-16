@@ -25,6 +25,7 @@ function config.treesitter()
         "luadoc",
         "make",
         "markdown",
+        "nginx",
         "query",
         "python",
         "pug",
