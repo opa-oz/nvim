@@ -10,7 +10,7 @@ packageadd({
         {
             "<C-f>",
             function()
-                require("conform").format({ async = true, lsp_fallback = "fallback" })
+                require("conform").format({ async = false, lsp_fallback = "fallback" })
             end,
             mode = "",
             desc = "[F]ormat buffer",

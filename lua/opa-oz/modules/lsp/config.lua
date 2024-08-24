@@ -133,11 +133,22 @@ function config.masonlspconfig()
             pylsp = function()
                 require("lspconfig").pylsp.setup({
                     settings = {
-                        pylsp = {
+                        pylsp = { -- https://jdhao.github.io/2023/07/22/neovim-pylsp-setup/
                             plugins = {
+                                -- formatter options
                                 black = { enabled = true },
-                                pylint = { enabled = true, executable = "pylint" },
-                                pyls_isort = { enabled = true },
+                                autopep8 = { enabled = false },
+                                yapf = { enabled = false },
+                                -- linter options
+                                pylint = { enabled = false, executable = "pylint" }, -- это дермище делает ошибки линтера тупые
+                                pyflakes = { enabled = false },
+                                pycodestyle = { enabled = false },
+                                -- type checker
+                                pylsp_mypy = { enabled = false },
+                                -- auto-completion options
+                                jedi_completion = { fuzzy = false },
+                                -- import sorting
+                                pyls_isort = { enabled = false },
                             },
                             flags = {
                                 debounce_text_changes = 200,
