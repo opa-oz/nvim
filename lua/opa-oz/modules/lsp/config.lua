@@ -17,6 +17,7 @@ function config.treesitter()
         "hcl",
         "helm",
         "html",
+        "http",
         "ini",
         "javascript",
         "jsdoc",
@@ -26,6 +27,7 @@ function config.treesitter()
         "make",
         "markdown",
         "nginx",
+        "nix",
         "query",
         "python",
         "pug",
@@ -78,7 +80,7 @@ function config.masoninstaller()
         "stylua",
 
         -- Javascript
-        "tsserver",
+        "ts_ls",
         "eslint",
         "prettierd",
         "jsonls",
@@ -128,6 +130,9 @@ function config.masonlspconfig()
         -- ensure_installed = ensure_installed,
         handlers = {
             function(server_name)
+                if server_name == "tsserver" then
+                    server_name = "ts_ls"
+                end
                 require("lspconfig")[server_name].setup({})
             end,
             pylsp = function()

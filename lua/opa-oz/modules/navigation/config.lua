@@ -172,23 +172,25 @@ function config.dashboard()
                 end,
             },
             footer = function()
-                local cmd = ":!curl -s -m 3 'https://wttr.in/{Tokyo,Saratov}?format=3'"
-                local status, weather = pcall(vim.api.nvim_exec2, cmd, { output = true })
+                -- local cmd = ":!curl -s -m 3 'https://wttr.in/{Tokyo,Saratov}?format=3'"
+                -- local status, weather = pcall(vim.api.nvim_exec2, cmd, { output = true })
+                local status = false -- Hardcoded for speed, no because not working
+
                 if not status then
                     return { "", "🦁 24/7 lion" }
                 end
 
-                local result = vim.split(weather.output, "\n")
-                local footer = { "" }
-
-                for _, part in pairs(result) do
-                    local trimmed = vim.trim(part)
-                    if #trimmed ~= 0 and #trimmed < #cmd then
-                        footer[#footer + 1] = part
-                    end
-                end
-
-                return footer
+                -- local result = vim.split(weather.output, "\n")
+                -- local footer = { "" }
+                --
+                -- for _, part in pairs(result) do
+                --     local trimmed = vim.trim(part)
+                --     if #trimmed ~= 0 and #trimmed < #cmd then
+                --         footer[#footer + 1] = part
+                --     end
+                -- end
+                --
+                -- return footer
             end,
         },
     })

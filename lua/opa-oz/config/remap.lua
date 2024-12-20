@@ -24,4 +24,4 @@ map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
 map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
 
-map("<leader>p", "viwpyiw", "[P]aste word")
+map("<leader>pp", "viwpyiw", "[P]aste word")
