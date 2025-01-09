@@ -80,7 +80,7 @@ function config.masoninstaller()
         "stylua",
 
         -- Javascript
-        "ts_ls",
+        "tsserver",
         "eslint",
         "prettierd",
         "jsonls",
@@ -102,18 +102,23 @@ function config.masoninstaller()
         "gopls",
 
         -- Utils
-        "markdown-oxide",
+        "markdown_oxide",
         "dotls",
         "bashls",
 
         -- Terraform
         "terraformls",
         "tflint",
+        "hclfmt",
 
         -- YAML
         "yamlls",
         "yamllint",
         "actionlint",
+
+        -- Misc
+        "nil_ls",
+        "rnix",
     }
 
     require("mason-tool-installer").setup({
@@ -145,15 +150,21 @@ function config.masonlspconfig()
                                 autopep8 = { enabled = false },
                                 yapf = { enabled = false },
                                 -- linter options
-                                pylint = { enabled = false, executable = "pylint" }, -- это дермище делает ошибки линтера тупые
+                                pylint = {
+                                    enabled = true,
+                                    -- executable = "pylint",
+                                }, -- это дермище делает ошибки линтера тупые
                                 pyflakes = { enabled = false },
                                 pycodestyle = { enabled = false },
                                 -- type checker
-                                pylsp_mypy = { enabled = false },
+                                pylsp_mypy = { enabled = true },
                                 -- auto-completion options
-                                jedi_completion = { fuzzy = false },
+                                jedi_completion = { fuzzy = true },
                                 -- import sorting
                                 pyls_isort = { enabled = false },
+                                rope_autoimport = {
+                                    enabled = false,
+                                },
                             },
                             flags = {
                                 debounce_text_changes = 200,
