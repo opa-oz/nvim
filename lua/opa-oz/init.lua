@@ -25,12 +25,12 @@ require("opa-oz.autocommands")
 -- })
 
 -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
--- parser_config.robots = {
+-- parser_config.caddy = {
 --     install_info = {
---         url = "https://github.com/opa-oz/tree-sitter-robots-txt", -- local path or git repo
+--         url = "https://github.com/opa-oz/tree-sitter-caddy", -- local path or git repo
 --         files = { "src/parser.c", "src/scanner.c" }, -- note that some parsers also require src/scanner.c or src/scanner.cc
 --         branch = "main",
 --     },
---     -- filetype = "terraform-vars", -- if filetype does not match the parser name
+--     filetype = "Caddyfile", -- if filetype does not match the parser name
 -- }
--- vim.treesitter.language.register("tfvars", { "terraform-vars" })
+-- vim.treesitter.language.register("caddy", { "Caddyfile" })

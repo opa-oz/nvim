@@ -18,13 +18,14 @@ packageadd({
     },
 })
 
-packageadd({
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    event = "VeryLazy",
-    config = conf.harpoon,
-})
+-- NOTE: Testing arrow now
+-- packageadd({
+--     "ThePrimeagen/harpoon",
+--     branch = "harpoon2",
+--     dependencies = { "nvim-lua/plenary.nvim" },
+--     event = "VeryLazy",
+--     config = conf.harpoon,
+-- })
 
 packageadd({
     "natecraddock/workspaces.nvim",
@@ -36,5 +37,12 @@ packageadd({
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     config = conf.dashboard,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+})
+
+packageadd({
+    "otavioschwanck/arrow.nvim",
+    config = conf.arrow,
+    event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
 })

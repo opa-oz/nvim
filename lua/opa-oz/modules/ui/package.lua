@@ -10,7 +10,7 @@ packageadd({
 packageadd({
     "nvim-lualine/lualine.nvim",
     event = "BufEnter */*",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { "nvim-tree/nvim-web-devicons", "arkav/lualine-lsp-progress" },
     commit = "0a5a66803c7407767b799067986b4dc3036e1983",
     config = conf.lualine,
 })

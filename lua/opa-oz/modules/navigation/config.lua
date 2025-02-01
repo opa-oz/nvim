@@ -74,7 +74,16 @@ function config.nvimtree()
     })
 end
 
+function config.arrow()
+    require("arrow").setup({
+        show_icons = true,
+        leader_key = ";", -- Recommended to be a single key
+        -- buffer_leader_key = "m", -- Per Buffer Mappings
+    })
+end
+
 function config.harpoon()
+    -- WARN: Deprecated
     local harpoon = require("harpoon")
     harpoon:setup()
 

@@ -5,8 +5,17 @@ function config.dracula()
 end
 
 function config.lualine()
+    local statusline = require("arrow.statusline")
+    local function arrow_status()
+        return statusline.text_for_statusline_with_icons()
+    end
+    local custom_dracula = require("lualine.themes.dracula")
+
     require("lualine").setup({
-        options = { theme = "dracula" },
+        options = { theme = custom_dracula },
+        sections = {
+            lualine_b = { "branch", "diff", "diagnostics", arrow_status },
+        },
     })
 end
 
