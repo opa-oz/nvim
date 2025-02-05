@@ -99,6 +99,10 @@ function config.masoninstaller()
         "dockerls",
         "helm_ls",
 
+        -- Ansible
+        "ansible-lint",
+        "ansiblels",
+
         -- Golang
         "gopls",
 
