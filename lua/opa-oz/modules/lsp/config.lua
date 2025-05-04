@@ -124,6 +124,10 @@ function config.masoninstaller()
         -- Misc
         "nil_ls",
         "rnix",
+
+        -- Ansible
+        "ansible-lint",
+        "ansiblels",
     }
 
     require("mason-tool-installer").setup({

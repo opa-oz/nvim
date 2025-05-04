@@ -41,6 +41,12 @@ packageadd({
 })
 
 packageadd({
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+})
+
+packageadd({
     "kr40/nvim-macros",
     event = "VeryLazy",
     tag = "v0.3.5",

@@ -36,7 +36,8 @@ packageadd({
     config = conf.whichkey,
 })
 
-packageadd({ "github/copilot.vim", tag = "v1.37.0" })
+-- HACK: Disabled because I don't like it
+-- packageadd({ "github/copilot.vim", tag = "v1.37.0" })
 
 packageadd({
     "dstein64/vim-startuptime",

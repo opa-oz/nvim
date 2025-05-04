@@ -25,3 +25,7 @@ map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
 
 map("<leader>pp", "viwpyiw", "[P]aste word")
+map("<leader>R", ":so %<CR>", "[R]eload Nvim config")
+map("<leader>W", ":set wrap!<CR>", "Toggle [W]rap")
+
+map("<C-Y>", 'ggVG"+y', "Copy whole file")

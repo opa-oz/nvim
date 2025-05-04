@@ -32,3 +32,20 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.lsp.buf.format({ async = false })
     end,
 })
+
+-- spellcheck in md
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "setlocal spell wrap",
+})
+
+-- restore cursor pos on file open
+vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern = "*",
+    callback = function()
+        local line = vim.fn.line("'\"")
+        if line > 1 and line <= vim.fn.line("$") then
+            vim.cmd("normal! g'\"")
+        end
+    end,
+})

@@ -9,7 +9,7 @@ require("opa-oz.hooks")
 -- init autocommands
 require("opa-oz.autocommands")
 
-require("opa-oz.filetype.ansible")
+require("opa-oz.filetype")
 
 -- vim.api.nvim_create_autocmd("BufReadPost", {
 -- 	pattern = "*.pug",
