@@ -33,6 +33,7 @@
   "toggleterm.nvim": { "branch": "main", "commit": "066cccf48a43553a80a210eb3be89a15d789d6e6" },
   "undotree": { "branch": "main", "commit": "eab459ab87dd249617b5f7187bb69e614a083047" },
   "vim-startuptime": { "branch": "master", "commit": "97a88e688482a09c3c4b777d07b509b328a5ec29" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "97e58f2b3b4f8fd30ce149302f10202f363cc361" },
   "which-key.nvim": { "branch": "main", "commit": "0539da005b98b02cf730c1d9da82b8e8edb1c2d2" },
   "workspaces.nvim": { "branch": "master", "commit": "55a1eb6f5b72e07ee8333898254e113e927180ca" }
 }

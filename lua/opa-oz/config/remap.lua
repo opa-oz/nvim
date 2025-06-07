@@ -18,10 +18,10 @@ key.set("i", "<C-c>", "<Esc>")
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-map("<C-h>", "<C-w><C-h>", "Move focus to the left window")
-map("<C-l>", "<C-w><C-l>", "Move focus to the right window")
-map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
-map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
+-- map("<C-h>", "<C-w><C-h>", "Move focus to the left window")
+-- map("<C-l>", "<C-w><C-l>", "Move focus to the right window")
+-- map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
+-- map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
 
 map("<leader>pp", "viwpyiw", "[P]aste word")
