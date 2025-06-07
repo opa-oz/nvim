@@ -18,15 +18,6 @@ packageadd({
     },
 })
 
--- NOTE: Testing arrow now
--- packageadd({
---     "ThePrimeagen/harpoon",
---     branch = "harpoon2",
---     dependencies = { "nvim-lua/plenary.nvim" },
---     event = "VeryLazy",
---     config = conf.harpoon,
--- })
-
 packageadd({
     "natecraddock/workspaces.nvim",
     tar = "1.0",

@@ -14,6 +14,7 @@ key.set("n", "<leader>Y", '"+Y')
 -- replacement of Esc
 key.set("i", "<C-c>", "<Esc>")
 
+-- NOTE: Became useless lately
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -22,7 +23,7 @@ key.set("i", "<C-c>", "<Esc>")
 -- map("<C-l>", "<C-w><C-l>", "Move focus to the right window")
 -- map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
 -- map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
-map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
+-- map("<leader>ts", ":ToggleTerm<cr>", "Open [T]erminal")
 
 map("<leader>pp", "viwpyiw", "[P]aste word")
 map("<leader>R", ":so %<CR>", "[R]eload Nvim config")

@@ -12,8 +12,22 @@ function config.lualine()
     local custom_dracula = require("lualine.themes.dracula")
 
     require("lualine").setup({
-        options = { theme = custom_dracula },
+        options = {
+            theme = custom_dracula,
+            disabled_filetypes = {
+                statusline = { "NvimTree" },
+            },
+        },
         sections = {
+            lualine_a = {
+                {
+                    "mode",
+                    fmt = function(str)
+                        return str:sub(1, 1)
+                    end,
+                    padding = 1,
+                },
+            },
             lualine_b = { "branch", "diff", "diagnostics", arrow_status },
         },
     })
@@ -34,7 +48,15 @@ function config.undotree()
         float_diff = true, -- using float window previews diff, set this `true` will disable layout option
         layout = "left_bottom", -- "left_bottom", "left_left_bottom"
         position = "right", -- "right", "bottom"
-        ignore_filetype = { "undotree", "undotreeDiff", "qf", "TelescopePrompt", "spectre_panel", "tsplayground" },
+        ignore_filetype = {
+            "undotree",
+            "undotreeDiff",
+            "qf",
+            "TelescopePrompt",
+            "spectre_panel",
+            "tsplayground",
+            "NvimTree",
+        },
         window = {
             winblend = 30,
         },

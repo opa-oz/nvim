@@ -17,14 +17,15 @@ packageadd({
     opts = {},
 })
 
-packageadd({
-    "akinsho/toggleterm.nvim",
-    tag = "v2.11.0",
-    cmd = "ToggleTerm",
-    opts = {
-        direction = "horizontal",
-    },
-})
+-- NOTE: Useless since tmux
+-- packageadd({
+--     "akinsho/toggleterm.nvim",
+--     tag = "v2.11.0",
+--     cmd = "ToggleTerm",
+--     opts = {
+--         direction = "horizontal",
+--     },
+-- })
 
 packageadd({
     "nvimdev/hlsearch.nvim",
@@ -46,10 +47,11 @@ packageadd({
     config = true,
 })
 
-packageadd({
-    "kr40/nvim-macros",
-    event = "VeryLazy",
-    tag = "v0.3.5",
-    config = conf.macros,
-    cmd = { "MacroSave", "MacroYank", "MacroSelect", "MacroDelete" },
-})
+-- NOTE: Pretty useless, I even forget how to use it
+-- packageadd({
+--     "kr40/nvim-macros",
+--     event = "VeryLazy",
+--     tag = "v0.3.5",
+--     config = conf.macros,
+--     cmd = { "MacroSave", "MacroYank", "MacroSelect", "MacroDelete" },
+-- })

@@ -44,7 +44,7 @@ packageadd({
 })
 
 packageadd({
-    -- if put any even in here - it stops working
+    -- if put any event in here - it stops working
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     commit = "5260e5e8ecadaf13e6b82cf867a909f54e15fd07",
@@ -54,8 +54,9 @@ packageadd({
     config = conf.nvimcmp,
 })
 
-packageadd({
-    "L3MON4D3/LuaSnip",
-    tag = "v2.3.0",
-    build = "make install_jsregexp",
-})
+-- NOTE: Seems I'm not using it
+-- packageadd({
+--     "L3MON4D3/LuaSnip",
+--     tag = "v2.3.0",
+--     build = "make install_jsregexp",
+-- })

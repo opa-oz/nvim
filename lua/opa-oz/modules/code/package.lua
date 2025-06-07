@@ -48,8 +48,9 @@ packageadd({
     init = conf.startuptime,
 })
 
-packageadd({
-    "rest-nvim/rest.nvim",
-    -- cmd = "Rest",
-    tag = "v3.0.3",
-})
+-- WARN: Not even working
+-- packageadd({
+--     "rest-nvim/rest.nvim",
+--     -- cmd = "Rest",
+--     tag = "v3.0.3",
+-- })
