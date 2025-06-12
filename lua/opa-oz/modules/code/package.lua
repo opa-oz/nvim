@@ -47,10 +47,3 @@ packageadd({
     -- init is called during startup. Configuration for vim plugins typically should be set in an init function
     init = conf.startuptime,
 })
-
--- WARN: Not even working
--- packageadd({
---     "rest-nvim/rest.nvim",
---     -- cmd = "Rest",
---     tag = "v3.0.3",
--- })
