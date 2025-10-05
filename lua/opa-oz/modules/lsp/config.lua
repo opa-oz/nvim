@@ -8,6 +8,7 @@ function config.treesitter()
         "csv",
         "dockerfile",
         "dot",
+        "dart",
         "gitignore",
         "go",
         "gomod",
@@ -125,6 +126,7 @@ function config.masoninstaller()
         -- Misc
         "nil_ls",
         "rnix",
+        "pug-lsp",
 
         -- Ansible
         "ansible-lint",
@@ -141,6 +143,8 @@ function config.masoninstaller()
 end
 
 function config.masonlspconfig()
+    require("lspconfig").pug.setup({})
+
     require("mason-lspconfig").setup({
         -- ensure_installed = ensure_installed,
         handlers = {

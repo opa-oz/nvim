@@ -47,3 +47,12 @@ packageadd({
     -- init is called during startup. Configuration for vim plugins typically should be set in an init function
     init = conf.startuptime,
 })
+
+packageadd({
+    "nvim-flutter/flutter-tools.nvim",
+    lazy = false,
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    config = true,
+})
