@@ -2,8 +2,8 @@ local conf = require("opa-oz.modules.lsp.config")
 
 -- return { "opa-oz/nvim-treesitter", branch = "feat-robots", build = ":TSUpdate" }
 packageadd({
-    "opa-oz/nvim-treesitter",
-    -- "nvim-treesitter/nvim-treesitter",
+    -- "opa-oz/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
     branch = "feat/caddy",
     build = ":TSUpdate",
     config = conf.treesitter,

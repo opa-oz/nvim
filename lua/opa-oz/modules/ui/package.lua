@@ -57,3 +57,16 @@ packageadd({
     "nvim-tree/nvim-web-devicons",
     lazy = true,
 })
+
+packageadd({
+    "opa-oz/ascii-paste.vim",
+    cmd = "Ascii",
+    -- tag = "v0.1.0",
+    -- dir = "/Users/vladimirlevin/Repos/ascii-paste.vim",
+})
+
+packageadd({
+    "opa-oz/ollama-copilot.vim",
+    -- tag = "v0.1.0",
+    dir = "/Users/vladimirlevin/Repos/ollama-copilot.vim",
+})

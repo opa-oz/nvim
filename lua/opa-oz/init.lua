@@ -12,18 +12,33 @@ require("opa-oz.autocommands")
 require("opa-oz.filetype")
 
 -- vim.api.nvim_create_autocmd("BufReadPost", {
--- 	pattern = "*.pug",
--- 	callback = function(event)
--- 		-- Test self-written plugins
--- 		vim.lsp.start({
--- 			bufnr = event.bufnr,
--- 			name = "pug-lsp",
--- 			-- filetypes = { 'lua', 'json' },
--- 			cmd = { "/Users/vladimirlevin/Repos/Goland/pug-lsp/pug-lsp" },
--- 			root_dir = vim.fn.getcwd(),
--- 			-- root_dir = '/Users/vladimirlevin/.config/nvim',
--- 		})
--- 	end,
+--     pattern = "*.pug",
+--     callback = function(event)
+--         -- Test self-written plugins
+--         vim.lsp.start({
+--             bufnr = event.bufnr,
+--             name = "pug-lsp",
+--             -- filetypes = { 'lua', 'json' },
+--             cmd = { "/Users/vladimirlevin/Repos/Goland/pug-lsp/pug-lsp" },
+--             root_dir = vim.fn.getcwd(),
+--             -- root_dir = '/Users/vladimirlevin/.config/nvim',
+--         })
+--     end,
+-- })
+
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--     pattern = "*",
+--     callback = function(event)
+--         -- Test self-written plugins
+--         vim.lsp.start({
+--             bufnr = event.bufnr,
+--             name = "ollama-copilot",
+--             -- filetypes = { 'lua', 'json' },
+--             cmd = { "/Users/vladimirlevin/Repos/ollama-copilot.vim/ollama-copilot/ollama-copilot" },
+--             root_dir = vim.fn.getcwd(),
+--             -- root_dir = '/Users/vladimirlevin/.config/nvim',
+--         })
+--     end,
 -- })
 
 -- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()

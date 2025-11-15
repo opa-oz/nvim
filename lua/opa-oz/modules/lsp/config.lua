@@ -143,7 +143,10 @@ function config.masoninstaller()
 end
 
 function config.masonlspconfig()
-    require("lspconfig").pug.setup({})
+    local lspConfig = vim.lsp.config
+    local lspEnable = vim.lsp.enable
+    -- lspconfig.pug.setup({})
+    lspEnable("pug")
 
     require("mason-lspconfig").setup({
         -- ensure_installed = ensure_installed,
@@ -152,10 +155,11 @@ function config.masonlspconfig()
                 if server_name == "tsserver" then
                     server_name = "ts_ls"
                 end
-                require("lspconfig")[server_name].setup({})
+                -- lspconfig[server_name].setup({})
+                lspEnable(server_name)
             end,
             pylsp = function()
-                require("lspconfig").pylsp.setup({
+                lspConfig("pylsp", {
                     settings = {
                         pylsp = { -- https://jdhao.github.io/2023/07/22/neovim-pylsp-setup/
                             plugins = {
